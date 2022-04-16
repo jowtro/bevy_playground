@@ -1,5 +1,3 @@
-use std::f64::consts::PI;
-
 use bevy::prelude::*;
 use bevy_inspector_egui::{Inspectable, InspectorPlugin};
 use bevy_prototype_lyon::prelude::*;
@@ -71,8 +69,7 @@ fn handle_mouse_clicks(mouse_input: Res<Input<MouseButton>>, windows: Res<Window
     }
 }
 
-fn change_size_system(data: Res<Data>, mut query: Query<&mut Path>, time: Res<Time>) {
-    //let sides = ((time.seconds_since_startup() - PI * 2.5).sin() * 2.5 + 5.5).round() as usize;
+fn change_size_system(data: Res<Data>, mut query: Query<&mut Path>) {
     let sides = data.sides;
     let size = data.size;
 
