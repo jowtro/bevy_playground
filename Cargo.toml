@@ -1,3 +1,3 @@
 [workspace]
 resolver = "2" # Important! wgpu/Bevy needs this!
-members = ["basic","bevy_inspector"]
+members = ["basic","bevy_inspector","test_heron"]
